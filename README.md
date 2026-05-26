@@ -1,33 +1,38 @@
-# Todo Backend API
+#Code Structure 
+To-do List/
+│
+├── Backend/
+│   │
+│   ├── public/                          ← Frontend Files
+│   │   │
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   ├── app.js
+│   │   ├── Moonlight.jpg
+│   │   └── Space_Theme.jpg
+│   │
+│   ├── models/                          ← MongoDB Models
+│   │   │
+│   │   └── Task.js
+│   │
+│   ├── routes/                          ← API Routes
+│   │   │
+│   │   └── taskRoutes.js
+│   │
+│   ├── node_modules/                    ← Installed Packages
+│   │
+│   ├── .env                             ← Real MongoDB URL
+│   ├── .env.example                     ← Example Env File
+│   ├── .gitignore
+│   │
+│   ├── server.js                        ← Main Backend Server
+│   ├── package.json
+│   └── package-lock.json
+│
+├── .git/
+│
+└── README.md
 
-This backend provides a simple task API using Express and MongoDB.
+n
 
-## Setup
 
-1. Install dependencies:
-   ```bash
-   cd Backend
-   npm install
-   ```
-2. Create a `.env` file from `.env.example` and set your MongoDB URI, or use the provided `Backend/.env` for local MongoDB.
-3. Start the server:
-   ```bash
-   npm run dev
-   ```
-
-## API Endpoints
-
-- `GET /api/tasks` - list all tasks
-- `POST /api/tasks` - add a task
-- `PUT /api/tasks/:id` - update a task
-- `DELETE /api/tasks/:id` - delete a task
-
-## Task payload example
-
-```json
-{
-  "title": "Buy groceries",
-  "description": "Milk, eggs, bread",
-  "completed": false
-}
-```
